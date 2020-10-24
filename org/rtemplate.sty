@@ -1,0 +1,164 @@
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+
+% User defined commands
+\newcommand{\payAttention}[3]{{\color{#1}[[\textbf{#2: }#3]]}}
+\newcommand{\todo}[1]{\payAttention{red}{XXX TODO}{#1}}
+\newcommand{\note}[1]{\payAttention{blue}{Note: }{#1}}
+\newcommand{\xSays}[3]{\payAttention{#1}{#2 Says}{#3}}
+\newcommand{\jordan}[1]{\xSays{orange}{Jordan}{#1}}
+
+% Theorem Environments
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{invar}{Invariant}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{obs}{Observation}
+\newtheorem{conj}{Conjecture}
+\newtheorem{prop}[theorem]{Proposition}
+
+% Statistics
+\def \expectation {\mathbb{E}}
+
+% Spaces/sets
+\def \ints {\mathbb{Z}}
+\def \reals {\mathbb{R}}
+\def \rationals {\mathbb{Q}}
+\def \complex {\mathbb{C}}
+
+% Standard Groups
+\def \zmodtwo {\mathbb{Z} / 2 \mathbb{Z}}
+
+% Abstract Algebra
+\def \subgroup {\leq}
+\def \normalsubgroup {\unlhd}
+
+% Homology
+\def \holedim {d}
+\def \simpdim {q}
+\def \simplex {\Delta^{\simpdim}}
+\def \simpcomp {\mathbf{K}}
+
+\def \dimchains {C_{\simpdim}(\simpcomp)}
+\def \dimcycle {Z_{\simpdim}(\simpcomp)}
+\def \dimboundary {B_{\simpdim}(\simpcomp)}
+\def \dimhomology {H_{\simpdim}(\simpcomp)}
+\def \boundary {\partial}
+
+% Persistent Homology
+\def \filtration {\{ K_t \}_{t \in T} }
+\def \pd {\mathcal{D}}
+
+% Measure Theory Notation
+\def \sigmafield {\mathscr{F}}
+
+% Point Process Notation
+
+\def \samplespace {X}
+\def \bsamplespace {\mathcal{X}}
+\def \spacespace {\mathcal{S}}
+\def \markspace {\mathcal{M}}
+\def \timespace {\mathcal{T}}
+\def \ssexponential {\samplespace_e}
+
+% Set Theory
+\def \infiunion {\cup_{n=0}^{\infty}}
+
+% Common sums
+\def \sumizeroton {\sum_{i=0}^n}
+\def \sumizerotop {\sum_{i=0}^p}
+\def \sumioneton {\sum_{i=1}^n}
+\def \sumionetop {\sum_{i=1}^p}
+
+% Math script shortcuts
+\def \mscrA {\mathscr{A}}
+\def \mscrB {\mathscr{B}}
+\def \mscrC {\mathscr{C}}
+\def \mscrD {\mathscr{D}}
+\def \mscrE {\mathscr{E}}
+\def \mscrF {\mathscr{F}}
+\def \mscrG {\mathscr{G}}
+\def \mscrF {\mathscr{F}}
+\def \mscrN {\mathscr{N}}
+\def \mscrS {\mathscr{S}}
+\def \mscrX {\mathscr{X}}
+
+% Mathcal shortcuts
+\def \mcalA {\mathcal{A}}
+\def \mcalB {\mathcal{B}}
+\def \mcalC {\mathcal{C}}
+\def \mcalD {\mathcal{D}}
+\def \mcalE {\mathcal{E}}
+\def \mcalF {\mathcal{F}}
+\def \mcalG {\mathcal{G}}
+\def \mcalF {\mathcal{F}}
+\def \mcalX {\mathcal{X}}
+
+
+% Bold Greek
+\def \bfbeta {\mathbf{\beta}}
+\def \bftheta {\mathbf{\theta}}
+\def \bfmu {\mathbf{\mu}}
+
+% Bold Roman Lowercase
+\def \bfa {\mathbf{a}}
+\def \bfb {\mathbf{b}}
+\def \bfc {\mathbf{c}}
+\def \bfd {\mathbf{d}}
+\def \bfe {\mathbf{e}}
+\def \bff {\mathbf{f}}
+\def \bfg {\mathbf{g}}
+\def \bfh {\mathbf{h}}
+\def \bfi {\mathbf{i}}
+\def \bfj {\mathbf{j}}
+\def \bfk {\mathbf{k}}
+\def \bfl {\mathbf{l}}
+\def \bfm {\mathbf{m}}
+\def \bfn {\mathbf{n}}
+\def \bfo {\mathbf{o}}
+\def \bfp {\mathbf{p}}
+\def \bfq {\mathbf{}}
+\def \bfr {\mathbf{r}}
+\def \bfs {\mathbf{s}}
+\def \bft {\mathbf{t}}
+\def \bfu {\mathbf{u}}
+\def \bfv {\mathbf{v}}
+\def \bfw {\mathbf{w}}
+\def \bfx {\mathbf{x}}
+\def \bfy {\mathbf{y}}
+\def \bfz {\mathbf{z}}
+
+% Bold Roman Uppercase
+\def \bfA {\mathbf{A}}
+\def \bfB {\mathbf{B}}
+\def \bfC {\mathbf{C}}
+\def \bfD {\mathbf{D}}
+\def \bfE {\mathbf{E}}
+\def \bfF {\mathbf{F}}
+\def \bfG {\mathbf{G}}
+\def \bfH {\mathbf{H}}
+\def \bfI {\mathbf{I}}
+\def \bfJ {\mathbf{J}}
+\def \bfK {\mathbf{K}}
+\def \bfL {\mathbf{L}}
+\def \bfM {\mathbf{M}}
+\def \bfN {\mathbf{N}}
+\def \bfO {\mathbf{O}}
+\def \bfP {\mathbf{P}}
+\def \bfQ {\mathbf{Q}}
+\def \bfR {\mathbf{R}}
+\def \bfS {\mathbf{S}}
+\def \bfT {\mathbf{T}}
+\def \bfU {\mathbf{U}}
+\def \bfV {\mathbf{V}}
+\def \bfW {\mathbf{W}}
+\def \bfX {\mathbf{X}}
+\def \bfY {\mathbf{Y}}
+\def \bfZ {\mathbf{Z}}
+
+% Bold Numeric
+\def \bfzero {\mathbf{0}}
